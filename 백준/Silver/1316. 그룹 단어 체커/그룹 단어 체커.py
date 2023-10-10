@@ -1,5 +1,5 @@
-N = int(input())
-cnt = N
+N=int(input())
+cnt=N
 
 for i in range(N):
     word = input()

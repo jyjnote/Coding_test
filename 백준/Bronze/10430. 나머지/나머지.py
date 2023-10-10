@@ -1,3 +1,15 @@
-A, B,C = map(int, input().split())
-a,b,c,d = (A+B)%C, ((A%C) + (B%C))%C,(A*B)%C,((A%C) * (B%C))%C
-print(a,b,c,d,sep='\n')
+a, b, c = map(int, input().split())
+result1 = (a + b) % c
+
+
+result2 = ((a % c) + (b % c)) % c
+
+
+result3 = (a * b) % c
+
+result4 = ((a % c) * (b % c)) % c
+
+print(result1)
+print(result2)
+print(result3)
+print(result4)

@@ -1,12 +1,10 @@
-n = int(input())
-words = []
+n = int(input())  
 
-for _ in range(n):
-    word = input().strip()
-    words.append(word)
+ws = []  
 
+for i in range(n):
+    word = input()
+    ws.append(word) 
+uw = sorted(set(ws), key=lambda x: (len(x), x))
 
-unique_words = sorted(set(words), key=lambda x: (len(x), x))
-
-for word in unique_words:
-    print(word)
+print(*uw) 

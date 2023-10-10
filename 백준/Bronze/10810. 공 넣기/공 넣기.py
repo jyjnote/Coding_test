@@ -1,10 +1,16 @@
+
 N, M = map(int, input().split())
-basket = [0] * (N+1)
+
+
+baskets = [0] * N
+
 
 for _ in range(M):
-    i, j, k = map(int, input().split())
-    for n in range(i, j+1):
-        basket[n] = k 
 
-for i in range(1, N+1):
-    print(basket[i], end = ' ')
+    start, end, ball_number = map(int, input().split())
+
+    for i in range(start - 1, end):
+        baskets[i] = ball_number
+
+for ball in baskets:
+    print(ball, end=' ')

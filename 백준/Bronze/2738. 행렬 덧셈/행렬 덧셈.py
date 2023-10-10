@@ -1,15 +1,16 @@
+a,b = map(int, input().split())  
 
-N, M = map(int, input().split())
+A = []
+for _ in range(a):
+    row = list(map(int, input().split()))
+    A.append(row)
 
+B = []
+for _ in range(a):
+    row = list(map(int, input().split()))
+    B.append(row)
 
-matrix_A = [list(map(int, input().split())) for _ in range(N)]
+result = [[A[i][j] + B[i][j] for j in range(b)] for i in range(a)]
 
-
-matrix_B = [list(map(int, input().split())) for _ in range(N)]
-
-
-result_matrix = [[matrix_A[i][j] + matrix_B[i][j] for j in range(M)] for i in range(N)]
-
-# 결과 행렬 출력
-for row in result_matrix:
+for row in result:
     print(*row)

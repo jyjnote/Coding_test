@@ -1,12 +1,6 @@
 t = int(input())
 
 for _ in range(t):
-    h, w, p = map(int, input().split())
-    floor = p % h
-    room_num = p // h + 1
-
-    if floor == 0:
-        floor = h
-        room_num -= 1
-
-    print(floor * 100 + room_num)
+    h, w, n = map(int, input().split())
+    f, r = n % h or h, (n - 1) // h + 1
+    print(f * 100 + r)

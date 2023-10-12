@@ -1,12 +1,9 @@
-N = int(input())
-
-if N == 1:
-    exit()
-
-factor = 2
-while N > 1:
-    if N % factor == 0:
-        print(factor)
-        N //= factor
+n=int(input())
+d=2
+while n>1:
+    a,b=divmod(n,d)
+    if b==0:
+        print(d)
+        n=a
     else:
-        factor += 1
+        d+=1
